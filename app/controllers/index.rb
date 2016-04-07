@@ -7,7 +7,7 @@ post '/recieve_sms' do
   content_type 'text/xml'
 
   response = Twilio::TwiML::Response.new do |r|
-    r.Message "Your phone number is #{User.all}"
+    r.Message "Hey BIG BOI"
 
   end
 
