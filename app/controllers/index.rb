@@ -2,6 +2,16 @@ get '/' do
   redirect "/restaurants"
 end
 
+post '/recieve_sms' do
+  content_type 'text/xml'
+
+  response = Twilio::TwiML::Response.new do |r|
+    r.Message 'Hey, You suck!'
+  end
+
+  response.to_xml
+end
+
 
 get '/logout' do
   logout!
