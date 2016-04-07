@@ -9,7 +9,7 @@ post '/recieve_sms' do
   response = Twilio::TwiML::Response.new do |r|
     r.Message do |message|
       message.Body "Body"
-      message.Media "https://media.giphy.com/media/F5yyC4s8sdHNu/giphy.gif"
+      message.Media "https://media.giphy.com/media/13tTN4ccM3R6us/giphy.gif"
     end
   end
 
