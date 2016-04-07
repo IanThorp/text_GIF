@@ -1,0 +1,123 @@
+body {
+  width: 100%;
+}
+
+/*HEADER*/
+
+header {
+  border-bottom: 3px solid #D1D1D1;
+  background-color: #58B3D1;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+header h2 {
+  font-size: 18px;
+}
+
+#navigation {
+  float: right;
+  margin-right: 10px;
+}
+
+
+#header-right a{
+  border-right: 2px solid #D1D1D1;
+  padding-right: 3px;
+}
+
+
+#welcome_user{
+  color: #D1D1D1;
+}
+
+a {
+  text-decoration: none;
+  color: #A85003;
+
+}
+
+header #logout_link {
+  border-left: 2px solid #D1D1D1;
+  border-right: none;
+  margin-left: 3px;
+  padding-left: 2px;
+}
+
+
+header h1{
+  width: 30%;
+  align: left;
+  color: #D1D1D1;
+  text-shadow: 5px 5px 2px #888888;
+}
+
+/*Login*/
+
+.user_forms {
+  margin: 1%;
+  text-align: center;
+  color: #D1D1D1;
+  background-color: #58B3D1;
+  padding: 0.5%;
+  margin-right: 37%;
+  margin-left: 37%;
+  padding-bottom: 1%;
+  /*border: 2px solid #D1D1D1;*/
+  box-shadow: 5px 5px 2px #888888;
+  width: 25%;
+}
+
+.user_forms input{
+  color: black;
+  margin: 1%;
+}
+
+
+/*BODY*/
+
+.restaurant_listing{
+  margin: 1%;
+  width: 25%;
+  height: auto;
+  border: 2px solid black;
+  box-shadow: 5px 5px 2px #888888;
+  display: inline-block;
+}
+
+.error {
+  color: #A85003;
+}
+
+#site_title {
+  text-align: center;
+}
+
+.rest_links {
+  float: right;
+  margin: 3px;
+}
+
+#delete_link {
+  box-shadow: 3px 3px 2px #888888;
+}
+
+.review_block {
+  width: 80%;
+  height: 10%;
+  border: 2px solid black;
+  color: #D1D1D1;
+  background-color: #58B3D1;
+}
+
+#restaurant_box {
+  float: left;
+  margin: 1%;
+  margin-right: 85%;
+  padding: 1%;
+  border: 0.5% solid black;
+  background-color: #58B3D1;
+  color: #D1D1D1;
+  box-shadow: 5px 5px 2px #888888;
+}

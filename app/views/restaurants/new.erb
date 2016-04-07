@@ -1,0 +1,27 @@
+<section id="new_restaurant_form" class="user_forms">
+  <h1>Create A Restaurant</h1>
+
+  <form class="user_forms" action="/restaurants" method="post">
+    <input type="hidden" name="restaurant[user_id]" value="<%=session[:id]%>">
+
+    <label for='restaurant_name'>Name:</label> <br>
+    <input id='restaurant_name'type='text' name='restaurant[name]'> <br>
+
+    <label for='restaurant_cuisine'>Cuisine:</label> <br>
+    <input id='restaurant_cuisine'type='text' name='restaurant[cuisine]'> <br>
+
+    <label for='restaurant_address'>Address:</label> <br>
+    <input id='restaurant_address'type='text' name='restaurant[address]'> <br>
+
+    <label for='restaurant_city'>City:</label> <br>
+    <input id='restaurant_city'type='text' name='restaurant[city]'> <br>
+
+    <label for='restaurant_state'>State:</label> <br>
+    <input id='restaurant_state'type='text' name='restaurant[state]'> <br>
+
+    <label for='restaurant_zip'>Zip:</label> <br>
+    <input id='restaurant_zip'type='text' name='restaurant[zip]'> <br>
+
+    <input type='submit' value='Create Restaurant'>
+  </form>
+</section>

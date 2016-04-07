@@ -1,0 +1,16 @@
+<section class="user_forms">
+  <%if @errors%>
+    <%@errors.each do |error|%>
+      <p class="error"><%=error%></p>
+    <%end%>
+  <%end%>
+
+  <h1>Login</h1>
+  <form id="login_form"  action='/login' method='post' >
+    <label for='email_field'>Email:</label> <br>
+    <input id='email_field' type='text' name='email'> <br>
+    <label for='password_field'>Password:</label> <br>
+    <input id='password_field' type='password' name='password'> <br>
+    <input id='login_submit' type='submit' value='Log in'>
+  </form>
+</section>

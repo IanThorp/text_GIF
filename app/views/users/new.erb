@@ -1,0 +1,19 @@
+
+<section id="sign_up_page" class="user_forms">
+
+  <%if @errors%>
+    <%@errors.each do |error|%>
+      <p class="error"><%=error%></p>
+    <%end%>
+  <%end%>
+
+<h1> Join Today </h1>
+
+<form id="new_user_form" class="user_forms" action="/users" method="post">
+
+  <label for='input_email'>Email:</label> <br>
+  <input id='input_first_name'type='text' name='user[email]'> <br>
+  <label for='input_password'>Password:</label> <br>
+  <input id='input_password'type='password' name='user[password]'> <br>
+  <input type='submit' value='Create Account'>
+</form>

@@ -1,0 +1,14 @@
+<section class="restaurant_listing">
+  <p><a href="/restaurants/<%=restaurant.id%>"><%=restaurant.name%></a></p>
+  <p><%=restaurant.city%>,<%=restaurant.state%></p>
+  <%if session[:id] == restaurant.user_id%>
+    <form id='delete_link' class='rest_links' method="post" action="/restaurants/<%=restaurant.id%>">
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="Delete">
+    </form>
+    <a class='rest_links' href="/restaurants/<%=restaurant.id%>/edit">Edit</a>
+
+  <%end%>
+
+
+</section>

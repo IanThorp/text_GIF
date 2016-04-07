@@ -1,0 +1,14 @@
+
+<section id="navigation">
+  <%if logged_in?%>
+    <%@user = User.find(session[:id])%>
+    <p id="welcome_user">Welcome: <%=@user.email%><a id='logout_link' href="/logout">Log out</a></p>
+
+  <%else%>
+    <a id='register_link' href="/users/new">Register</a>
+    <a id='login_link' href="/login">Log in</a>
+  <%end%>
+</section>
+
+
+

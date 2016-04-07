@@ -1,0 +1,26 @@
+<h1><%=@restaurant.name%></h1>
+<p>Cuisine: <%=@restaurant.cuisine%></p>
+<p>Located At: <%=@restaurant.address%>, <%=@restaurant.state%> <%=@restaurant.zip%></p>
+<br><hr><br>
+<%if @made_review == true%>
+  <p>Thank you for the review!<p>
+
+<%end%>
+<%if logged_in?%>
+  <%personal_reviews = Review.where(restaurant_id: @restaurant.id, user_id: session[:id])%>
+  <%if personal_reviews.length == 0%>
+    <%=erb :"/reviews/_new", layout: false, locals: {restaurant_id: @restaurant.id}%>
+  <%end%>
+<%else%>
+  <form method='get' action='/login'>
+    <input type='submit' value='Log in to Review'>
+  </form>
+<%end%>
+<br><hr><br>
+<h2>Reviews</h2>
+<%reviews = Review.where(restaurant_id: @restaurant.id)%>
+<%reviews.each do |review|%>
+  <p><%=erb :"reviews/_show", layout: false, locals: {review: review}%></p>
+<%end%>
+
+

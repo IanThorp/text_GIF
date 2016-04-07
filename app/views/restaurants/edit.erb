@@ -1,0 +1,33 @@
+
+
+
+
+<section id="edit_restaurant_form" class="user_forms">
+  <%restaurant = Restaurant.find(params[:id])%>
+  <h1>Eddit A Restaurant</h1>
+
+  <form class="user_forms" method="post" action="/restaurants/<%=restaurant.id%>">
+    <input type="hidden" name="restaurant[user_id]" value="<%=session[:id]%>">
+    <input type="hidden" name="_method" value="put">
+
+    <label for='restaurant_name'>Name:</label> <br>
+    <input id='restaurant_name'type='text' name='restaurant[name]' value="<%=restaurant.name%>"> <br>
+
+    <label for='restaurant_cuisine'>Cuisine:</label> <br>
+    <input id='restaurant_cuisine'type='text' name='restaurant[cuisine]' value="<%=restaurant.cuisine%>"> <br>
+
+    <label for='restaurant_address'>Address:</label> <br>
+    <input id='restaurant_address'type='text' name='restaurant[address]' value='<%=restaurant.address%>'> <br>
+
+    <label for='restaurant_city'>City:</label> <br>
+    <input id='restaurant_city'type='text' name='restaurant[city]' value="<%=restaurant.city%>"> <br>
+
+    <label for='restaurant_state'>State:</label> <br>
+    <input id='restaurant_state'type='text' name='restaurant[state]' value="<%=restaurant.state%>"> <br>
+
+    <label for='restaurant_zip'>Zip:</label> <br>
+    <input id='restaurant_zip'type='text' name='restaurant[zip]' value="<%=restaurant.zip%>"> <br>
+
+    <input type='submit' value='Edit Restaurant'>
+  </form>
+</section>

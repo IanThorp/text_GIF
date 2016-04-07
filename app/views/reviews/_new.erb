@@ -1,0 +1,16 @@
+<h2>Create a Review</h2>
+<form method='post' action='/restaurants/<%=restaurant_id%>/reviews'>
+  <input type="hidden" name="review[user_id]" value="<%=session[:id]%>">
+  <input type="hidden" name="review[restaurant_id]" value="<%=restaurant_id%>">
+  <label for='review_rating_input'>Rating:</label>
+  <select id="review_rating_input" name="review[rating]">
+    <option value="5">5</option>
+    <option value="4">4</option>
+    <option value="3">3</option>
+    <option value="2">2</option>
+    <option value="1">1</option>
+  </select><br>
+  <label for='review_body_input'>Body:</label>
+  <textarea id="review_body_input" rows="20" cols="40" name="review[body]"></textarea><br>
+  <input type="submit" value="Submit Review">
+</form>

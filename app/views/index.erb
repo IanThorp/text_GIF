@@ -1,0 +1,26 @@
+
+<section id="main">
+  <%if @restaurants%>
+    <%@restaurants.each do |restaurant|%>
+      <%=erb :"restaurants/_restaurant_listing", layout:false, locals: {restaurant: restaurant} %>
+    <%end%>
+  <%end%>
+  <%if logged_in?%>
+    <a id="new_restaurant" href="/restaurants/new">
+      <section id="restaurant_box">
+        Add a Restaurant
+      </section>
+    </a>
+  <%end%>
+  <form id="send_form" class="user_forms" action='/send' method='post'>
+    <%if @message%>
+    <p class="error"><%=@message%></p>
+    <%end%>
+    <h2>Send a Message</h2>
+    <label for="phone_input">Phone Number:</label>
+    <input id="phone_input" type="text" name="phone"> <br>
+    <label for="text_body">Text Body:</label>
+    <input id="text_body" type="text" name="body"> <br>
+    <input type="submit" value="Send">
+  </form>
+</section>
