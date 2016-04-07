@@ -3,10 +3,12 @@ get '/' do
 end
 
 post '/recieve_sms' do
+
   content_type 'text/xml'
 
   response = Twilio::TwiML::Response.new do |r|
-    r.Message 'Hey, You suck!'
+    r.Message "Your phone number is #{r.To}"
+
   end
 
   response.to_xml
