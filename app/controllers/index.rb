@@ -10,7 +10,7 @@ post '/recieve_sms' do
     r.Message do |message|
       message.Body "Body"
       message.Media "http://www.petmd.com/sites/default/cache/imagecache/node-gallery-display/shutterstock_19820554-slide1.jpg"
-      message.Media "https://media.giphy.com/media/F5yyC4s8sdHNu/giphy.gif"
+      message.Media "https://media.giphy.com/media/ykJRqKWc0cY5W/giphy.gif"
     end
   end
 
