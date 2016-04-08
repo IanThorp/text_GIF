@@ -1,15 +1,22 @@
 body {
   width: 100%;
+  background-image: url("../imgs/off-white.jpg");
 }
 
 /*HEADER*/
 
+#lion {
+  align: left;
+  height: 5%;
+}
 header {
   border-bottom: 3px solid #D1D1D1;
   background-color: #58B3D1;
   width: 100%;
   display: inline-block;
   text-align: center;
+  height: 10%;
+  width: 100%;
 }
 
 header h2 {
@@ -76,6 +83,9 @@ header h1{
 
 
 /*BODY*/
+h2 {
+  text-shadow: 3px 3px 2px #888888;
+}
 
 .restaurant_listing{
   margin: 1%;
