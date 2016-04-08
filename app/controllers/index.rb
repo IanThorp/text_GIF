@@ -1,5 +1,5 @@
 get '/' do
-  redirect "/restaurants"
+  erb :'index'
 end
 
 post '/recieve_sms' do
@@ -16,12 +16,14 @@ post '/recieve_sms' do
   response.to_xml
 end
 
-# get '/cat_fact' do
-#   api_result = RestClient.get 'http://www.catfact.info//api/v1/facts.json'
-#   jhash = JSON.parse(api_result)
-#   p jhash["facts"][rand(1..16)]["details"]
-#   redirect '/'
-# end
+get '/cat_fact' do
+  api_result = RestClient.get 'http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC'
+  p api_result["data"]
+  # jhash = JSON.parse(api_result)
+  # p jhash["data"]
+  # p jhash["facts"][rand(1..16)]["details"]
+  # redirect '/'
+end
 
 get '/logout' do
   logout!
@@ -45,6 +47,7 @@ post '/login' do
 end
 
 post '/send' do
+
   @api_result = RestClient.get 'http://www.catfact.info//api/v1/facts.json'
   @jhash = JSON.parse(@api_result)
   @result = @jhash["facts"][rand(1..16)]["details"]

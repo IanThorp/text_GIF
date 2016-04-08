@@ -1,4 +1,4 @@
-<!-- <a href="/cat_fact">cats</a> -->
+
 <section id="main">
   <%if @restaurants%>
     <%@restaurants.each do |restaurant|%>
@@ -19,4 +19,8 @@
     <input id="text_body" type="text" name="body"> <br>
     <input type="submit" value="Send">
   </form>
+
+  <%if @result%>
+    <p><%=@result%></p>
+  <%end%>
 </section>
