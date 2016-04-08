@@ -52,7 +52,7 @@ post '/send' do
   @number = "+1#{params[:phone]}"
 # set up a client to talk to the Twilio REST API
   @client = Twilio::REST::Client.new ENV['TWILLIO_SID'], ENV['TWILLIO_AUTH']
-  if parmas[:body] == nil
+  if params[:body] == nil
     @client.account.messages.create({
       :from => '+18315741012',
       :to => @number,
