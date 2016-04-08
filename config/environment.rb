@@ -10,7 +10,7 @@ Dotenv.load
 # Require gems we care about
 require 'rubygems'
 
-require 'dotenv'
+require 'rest-client'
 require 'uri'
 require 'pathname'
 

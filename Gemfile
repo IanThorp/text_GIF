@@ -15,6 +15,8 @@ gem 'bcrypt'
 gem 'shotgun'
 gem 'twilio-ruby'
 gem 'dotenv'
+gem 'rest-open-uri'
+gem 'rest-client'
 
 group :test do
   gem 'shoulda-matchers'

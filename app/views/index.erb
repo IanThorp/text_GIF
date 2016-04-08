@@ -1,4 +1,4 @@
-
+<!-- <a href="/cat_fact">cats</a> -->
 <section id="main">
   <%if @restaurants%>
     <%@restaurants.each do |restaurant|%>
@@ -6,11 +6,7 @@
     <%end%>
   <%end%>
   <%if logged_in?%>
-    <a id="new_restaurant" href="/restaurants/new">
-      <section id="restaurant_box">
-        Add a Restaurant
-      </section>
-    </a>
+
   <%end%>
   <form id="send_form" class="user_forms" action='/send' method='post'>
     <%if @message%>
