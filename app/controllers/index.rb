@@ -27,7 +27,7 @@ end
 
 get '/logout' do
   logout!
-  redirect '/restaurants'
+  redirect '/'
 end
 
 get '/login' do
